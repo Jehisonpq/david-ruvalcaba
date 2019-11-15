@@ -1,3 +1,4 @@
+/* Generales */
 body {
     margin: 0;
     font-family: "Open Sans",sans-serif;
@@ -7,6 +8,16 @@ body {
 h1, h2, h3 {
     font-family: "Montserrat",sans-serif;
 }
+
+h3 {
+	font-size: 2rem;
+    color: #0a4980;
+    text-align: center;
+    font-weight: 700;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+}
+
 .container {
   display: grid;
   grid-template: repeat(5, auto) / repeat(2, 1fr);
@@ -19,10 +30,12 @@ h1, h2, h3 {
                        "map map"
                        "footer footer";
 }
+
+/* Header */
 .item-header {
   grid-column: header;
   grid-row: 1;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.7);
   z-index: 1;
   height: 70px;
   display: grid;
@@ -78,6 +91,7 @@ nav ul li a img:hover{
 }
 
 
+/* Banner */
 .item-banner {
   grid-column: banner;
   grid-row: 1;
@@ -112,27 +126,59 @@ nav ul li a img:hover{
     font-weight: 300;
 }
 
+
+/* Services*/
 .item-services {
-  grid-column: services;
-  background-color: azure;
+	grid-column: services;
+    padding: 60px 0px;
+    display: grid;
+    grid-template-columns: minmax(auto,1170px);
+    justify-content: center;
 }
+.owl-carousel.owl-loaded {
+	padding: 0;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.owl-carousel .owl-stage-outer {
+	align-self: normal;
+}
+.owl-carousel li {
+	list-style: none;
+}
+.owl-carousel li h2 {
+	font-weight: 500;
+	font-size: 1.3rem;
+}
+.owl-carousel li p {
+	color: #9e9e9e;
+}
+.owl-carousel button.owl-dot{
+	width: 18px;
+	height: 18px;
+	border-radius: 20px;
+	background-color: #009cd9;
+	outline: 0;
+	margin: 0 8px;
+}
+.owl-carousel button.owl-dot.active {
+	background-color: #0a4980;
+}
+
+
 .item-aboutme {
-  grid-column: aboutme;
-  background-color: blue;
+	grid-column: aboutme;
 }
 .item-studies {
-  grid-column: studies;
-  background-color: azure;
+	grid-column: studies;
 }
 .item-contact {
-  grid-column: contact;
-  background-color: azure;
+	grid-column: contact;
 }
 .item-map {
-  grid-column: contact;
-  background-color: blue;
+	grid-column: contact;
 }
 .item-footer {
-  grid-column: footer;
-  background-color: red;
+	grid-column: footer;
 }
