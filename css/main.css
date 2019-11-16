@@ -1,4 +1,8 @@
 /* Generales */
+html {
+	scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Open Sans",sans-serif;
@@ -145,16 +149,18 @@ nav ul li a img:hover{
 /* Services*/
 .item-services {
 	grid-column: services;
-    padding: 80px 0px;
-    display: grid;
-    grid-template-columns: minmax(auto,1170px);
-    justify-content: center;
+	padding: 80px 0px;
+}
+.container-services {
+	max-width: 1170px;
+	width: 100%;
+	margin: auto;
 }
 .owl-carousel.owl-loaded {
 	padding: 0;
 	display: flex;
     flex-direction: column;
-    align-items: center;
+	align-items: center;
 }
 .owl-carousel .owl-stage-outer {
 	align-self: normal;
