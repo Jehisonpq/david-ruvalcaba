@@ -59,7 +59,7 @@ li {
 header {
     height: inherit;
     display: grid;
-    grid-template: auto / 1fr 1fr;
+    grid-template-columns: auto minmax(500px,0.5fr);
 }
 header picture {
     display: flex;
