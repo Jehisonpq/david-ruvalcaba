@@ -26,6 +26,7 @@ h3 {
 p, li {
 	color: #9e9e9e;
 	font-size: 1.1rem;
+	font-weight: 300;
 }
 
 ul {
@@ -36,61 +37,49 @@ li {
 	list-style: none;
 }
 
-.container {
-  display: grid;
-  grid-template: repeat(5, auto) / repeat(2, 1fr);
-  grid-template-areas: "header header"
-                       "banner banner"
-                       "services services"
-                       "aboutme aboutme"
-                       "studies studies"
-                       "contact contact"
-                       "map map"
-                       "footer footer";
-}
-
 /* Header */
 .item-header {
-  grid-column: header;
-  grid-row: 1;
-  background-color: rgba(0,0,0,0.7);
-  z-index: 1;
-  height: 70px;
-  display: grid;
-  grid-template-columns: minmax(auto, 90vw);
-  justify-content: center;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 10;
+	height: 70px;
+	width: 100%;
+	position: fixed;
+	display: grid;
+	grid-template-columns: minmax(auto, 90vw);
+	justify-content: center;
 }
 header {
-    height: inherit;
-    display: grid;
-    grid-template-columns: auto minmax(500px,0.5fr);
+	height: inherit;
+	display: grid;
+	grid-template-columns: auto minmax(500px,0.5fr);
 }
-header picture {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+header figure {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .logo-david {
-    width: 270px;
+	width: 270px;
 }
 nav {
 	height: inherit;
 }
 nav ul{
-    padding: 0;
-    display: flex;
-    flex-direction: row;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	height: inherit;
-    margin: 0;
+	margin: 0;
 }
 nav ul li{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 nav ul li a{
-    color: white;
+	color: white;
 	text-decoration: none;
 	transition: 0.3s;
 	font-weight: 300;
@@ -108,14 +97,24 @@ nav ul li a img:hover{
 	opacity: 0.6;
 }
 
+/* Container */
+.container {
+  display: grid;
+  grid-template: 100vh repeat(6, auto) / repeat(2, 1fr);
+  grid-template-areas: "banner banner"
+                       "services services"
+                       "aboutme aboutme"
+                       "studies studies"
+                       "contact contact"
+                       "map map"
+                       "footer footer";
+}
 
 /* Banner */
 .item-banner {
   grid-column: banner;
-  grid-row: 1;
   background: url('../images/doctor-david-ruvalcaba-big.jpg') top center no-repeat;
   background-size: cover;
-  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
