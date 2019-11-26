@@ -1,0 +1,10 @@
+/* Footer*/
+.item-footer {
+	grid-column: footer;
+	background: black;
+	footer {
+		display: flex;
+		justify-content: center;
+		padding: 40px 0;
+	}
+}
