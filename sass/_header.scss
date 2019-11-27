@@ -22,6 +22,9 @@ header {
 			width: 270px;
 		}
 	}
+	.menu_on {
+		display: none;
+	}
 	nav {
 		height: inherit;
 		ul{
@@ -41,7 +44,7 @@ header {
 					transition: 0.3s;
 					font-weight: 300;
 					&:hover {
-						color: $azulClaro;
+						color: $secondary-color;
 					}
 					img{
 						width: 20px;

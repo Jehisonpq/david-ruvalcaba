@@ -28,7 +28,7 @@
 			color: black;
 		}
 		a {
-			background: $azulClaro;
+			background: $secondary-color;
 			text-decoration: none;
 			color: white;
 			padding: 5px 15px;
@@ -40,11 +40,15 @@
 		width: 18px;
 		height: 18px;
 		border-radius: 20px;
-		background-color: $azulClaro;
+		background-color: $secondary-color;
 		outline: 0;
 		margin: 0 8px;
-	}
-	button.owl-dot.active {
-		background-color: $azulOscuro;
+		transition: .3s;
+		&.active {
+			background-color: $primary-color;
+		}
+		&:hover {
+			background-color: darken($secondary-color, 10);
+		}
 	}
 }
