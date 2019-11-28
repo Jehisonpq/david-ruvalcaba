@@ -25,3 +25,22 @@
 		padding: 0 50px;
 	}
 }
+
+@media screen and (max-width: $desktop) {
+	.item-aboutme, .item-studies {
+		grid-template: 70vh / 1fr 1fr;
+	}
+}
+@media screen and (max-width: $tablet) {
+	.item-studies  {
+		.item-text {
+			grid-row: 2/3;
+		}
+	}
+	.item-aboutme, .item-studies {
+		grid-template: auto / 1fr;
+		.item-text {
+			padding: 50px;
+		}
+	}
+}

@@ -3,9 +3,13 @@
 	grid-column: services;
 	padding: 80px 0px;
 	.container-services {
-		max-width: 1170px;
+		max-width: $desktop;
 		width: 100%;
 		margin: auto;
+		box-sizing: border-box;
+		@media screen and (max-width: $desktop) {
+			padding: 0 20px;
+		}
 	}
 }
 
@@ -35,6 +39,9 @@
 			font-size: 0.8rem;
 			border-radius: 20px;
 		}
+	}
+	.owl-dots {
+		margin-top: 20px;
 	}
 	button.owl-dot{
 		width: 18px;

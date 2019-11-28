@@ -211,8 +211,7 @@ $(document).ready(function(){
             },
             1000:{
                 items:4,
-                nav:true,
-                loop:false
+                nav:true
             }
         }
     });

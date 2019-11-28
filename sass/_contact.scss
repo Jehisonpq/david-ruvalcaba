@@ -3,7 +3,7 @@
 	grid-column: contact;
 	padding: 80px 0px;
     display: grid;
-    grid-template-columns: minmax(auto,1170px);
+    grid-template-columns: minmax(auto,$desktop);
 	justify-content: center;
 	background: url("../images/patron.png"), url("../images/fondoContacto.jpg");
 	background-repeat: repeat, no-repeat;
@@ -44,7 +44,7 @@
 			color: white;
 			padding: 10px;
 			font-weight: 300;
-			font-family: "Open Sans",sans-serif;
+			font-family: $font-titles;
 			margin-bottom: 10px;
 			box-sizing: border-box;
 			transition: 0.3s;
@@ -73,7 +73,7 @@
 			color: $primary-color;
 			padding: 16px 75px;
 			font-size: 1rem;
-			font-family: "Montserrat",sans-serif;
+			font-family: $font-text;
 			text-transform: uppercase;
 			border: none;
 			border-radius: 20px;
@@ -90,5 +90,11 @@
 	}
 	.info-contact {
 		text-align: center;
+	}
+}
+
+@media screen and (max-width: $desktop) {
+	.item-contact {
+		padding: 80px 20px;
 	}
 }

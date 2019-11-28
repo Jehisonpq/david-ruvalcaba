@@ -1,4 +1,6 @@
-/* Variables*/
+/* Breakpoints */
+/* Colors*/
+/* Fonts */
 body, ul {
   margin: 0;
   padding: 0; }
@@ -11,10 +13,10 @@ html {
   font-size: 16px; }
 
 body {
-  font-family: "Open Sans",sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 h1, h2, h3 {
-  font-family: "Montserrat",sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 h3 {
   font-size: 1.8rem;
@@ -121,9 +123,13 @@ header {
   grid-column: services;
   padding: 80px 0px; }
   .item-services .container-services {
-    max-width: 1170px;
+    max-width: 992px;
     width: 100%;
-    margin: auto; }
+    margin: auto;
+    box-sizing: border-box; }
+    @media screen and (max-width: 992px) {
+      .item-services .container-services {
+        padding: 0 20px; } }
 
 .owl-carousel .owl-stage-outer {
   align-self: normal; }
@@ -146,6 +152,8 @@ header {
     padding: 5px 15px;
     font-size: 0.8rem;
     border-radius: 20px; }
+.owl-carousel .owl-dots {
+  margin-top: 20px; }
 .owl-carousel button.owl-dot {
   width: 18px;
   height: 18px;
@@ -183,12 +191,23 @@ header {
     text-align: center;
     padding: 0 50px; }
 
+@media screen and (max-width: 992px) {
+  .item-aboutme, .item-studies {
+    grid-template: 70vh / 1fr 1fr; } }
+@media screen and (max-width: 768px) {
+  .item-studies .item-text {
+    grid-row: 2/3; }
+
+  .item-aboutme, .item-studies {
+    grid-template: auto / 1fr; }
+    .item-aboutme .item-text, .item-studies .item-text {
+      padding: 50px; } }
 /* Contact */
 .item-contact {
   grid-column: contact;
   padding: 80px 0px;
   display: grid;
-  grid-template-columns: minmax(auto, 1170px);
+  grid-template-columns: minmax(auto, 992px);
   justify-content: center;
   background: url("../images/patron.png"), url("../images/fondoContacto.jpg");
   background-repeat: repeat, no-repeat;
@@ -224,7 +243,7 @@ header {
       color: white;
       padding: 10px;
       font-weight: 300;
-      font-family: "Open Sans",sans-serif;
+      font-family: "Open Sans", sans-serif;
       margin-bottom: 10px;
       box-sizing: border-box;
       transition: 0.3s; }
@@ -247,7 +266,7 @@ header {
       color: #0a4980;
       padding: 16px 75px;
       font-size: 1rem;
-      font-family: "Montserrat",sans-serif;
+      font-family: "Montserrat", sans-serif;
       text-transform: uppercase;
       border: none;
       border-radius: 20px;
@@ -262,6 +281,9 @@ header {
   .item-contact .info-contact {
     text-align: center; }
 
+@media screen and (max-width: 992px) {
+  .item-contact {
+    padding: 80px 20px; } }
 /* Mapa*/
 .item-map {
   grid-column: contact;

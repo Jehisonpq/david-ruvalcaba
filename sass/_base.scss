@@ -5,11 +5,11 @@ html {
 }
 
 body {
-    font-family: "Open Sans",sans-serif;
+    font-family: $font-titles;
 }
 
 h1, h2, h3 {
-    font-family: "Montserrat",sans-serif;
+    font-family: $font-text;
 }
 
 h3 {
@@ -23,7 +23,7 @@ h3 {
 }
 
 p, li {
-	color: #9e9e9e;
+	color: $text-color;
 	font-size: 1.1rem;
 	font-weight: 300;
 }
