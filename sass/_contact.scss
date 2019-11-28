@@ -15,6 +15,7 @@
 		font-size: 1.6rem;
 		font-weight: 300;
 		margin-top: 60px;
+		padding: 0 20px;
 		a {
 			color: white;
 			text-decoration: none;
@@ -96,5 +97,27 @@
 @media screen and (max-width: $desktop) {
 	.item-contact {
 		padding: 80px 20px;
+	}
+}
+@media screen and (max-width: $mobile) {
+	.item-contact {
+		p {
+			font-size: 1.4rem;
+		}
+		form {
+			grid-template: repeat(3, auto) / 1fr;
+			padding: 0 20px;
+			.item {
+				&:last-child {
+					grid-column: auto;
+				}
+			}
+			textarea {
+				height: 30vh;
+			}
+			button {
+				margin-top: 0;
+			}
+		}
 	}
 }

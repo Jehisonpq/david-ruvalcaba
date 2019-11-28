@@ -4,3 +4,8 @@
 	height: 60vh;
 	background: black;
 }
+@media screen and (max-width: $mobile) {
+	.item-map {
+		height: 40vh;
+	}
+}
